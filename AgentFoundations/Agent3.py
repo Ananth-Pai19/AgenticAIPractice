@@ -37,6 +37,7 @@ def num_digits(num: int) -> int:
         return 1
     return count
 
+
 # Create the ToolNode for our tools
 tools = [add, subtract, multiply, num_digits]
 tool_node = ToolNode(tools=tools)
@@ -85,5 +86,5 @@ def print_stream(stream):
         else:
             message.pretty_print()
 
-inputs = {"messages": [("user", "Add 40 + 12 and then multiply the result with 2. Then tell me how many digits the final answer has.")]}
+inputs = {"messages": [("user", "Add 40 + 12 and then multiply the result with 2. Then tell me how many digits the final answer has. Finally, tell me a joke.")]}
 print_stream(app.stream(inputs, stream_mode="values"))
